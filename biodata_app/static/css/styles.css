@@ -1,0 +1,111 @@
+/* Mengatur gaya umum untuk seluruh halaman dengan gambar background */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Menggunakan font lebih modern */
+    background-image: url("../images/background.jpg"); /* Menghubungkan gambar background */
+    background-size: cover; /* Memastikan gambar memenuhi seluruh halaman */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-attachment: fixed; /* Membuat background tetap ketika menggulir halaman */
+    background-position: center; /* Memusatkan gambar */
+    margin: 0;
+    padding: 0;
+    color: #444; /* Warna teks umum yang lebih lembut */
+}
+
+/* Memastikan teks tetap mudah terbaca di atas background */
+header, .profile {
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan lebih transparansi */
+    border-radius: 6px; /* Radius yang lebih besar untuk sudut halus */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih kuat untuk kesan kedalaman */
+    padding: 25px;
+    margin: 25px;
+    text-align: center;
+}
+
+/* Mengatur tata letak container menjadi kolom (vertikal) */
+.container {
+    display: flex;
+    flex-direction: column;  /* Mengatur tata letak vertikal */
+    align-items: center;     /* Memusatkan profil secara horizontal */
+    margin: 20px auto;       /* Lebih banyak margin untuk memberi ruang */
+    max-width: 900px;        /* Lebar kontainer sedikit lebih besar */
+}
+
+/* Mengatur setiap profil dengan margin agar terlihat lebih teratur */
+.profile {
+    background-color: rgba(255, 255, 255, 0.95); /* Latar belakang putih dengan sedikit transparansi */
+    border: 0.5px solid #ddd;  /* Border lebih kecil */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+    padding: 35px;
+    margin: 30px 0;          /* Memberi margin vertikal antar profil */
+    width: 50%;             /* Memastikan profil memenuhi lebar kontainer */
+    text-align: center;      /* Memusatkan teks di setiap profil */
+    transition: transform 0.3s, box-shadow 0.3s; /* Menambahkan efek transisi umum */
+}
+
+.profile:hover {
+    transform: scale(1.02); /* Sedikit memperbesar profil saat hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Lebih banyak bayangan saat hover */
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out; /* Efek transisi halus */
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* Membesarkan gambar saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+}
+
+/* Mengatur gaya heading dan teks */
+h2 {
+    color: #222;
+    font-size: 24px; /* Memperbesar ukuran heading */
+    margin: 10px 0;
+}
+
+h3 {
+    color: #0056b3; /* Menggunakan warna lebih terang untuk subjudul */
+    margin-bottom: 5px;
+}
+
+p {
+    color: #555; /* Warna teks paragraf lebih lembut */
+    font-size: 16px; /* Ukuran teks yang lebih mudah dibaca */
+}
+
+/* Mengatur gaya footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan di footer */
+}
+
+/* Responsivitas untuk layar kecil */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px; /* Menambahkan padding untuk layar kecil */
+    }
+
+    .profile {
+        width: 90%; /* Mengatur lebar profil agar lebih responsif */
+    }
+
+    h2 {
+        font-size: 20px; /* Menyesuaikan ukuran teks di layar kecil */
+    }
+
+    p {
+        font-size: 14px; /* Ukuran paragraf lebih kecil untuk layar kecil */
+    }
+}
